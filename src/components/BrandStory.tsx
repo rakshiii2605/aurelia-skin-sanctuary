@@ -1,17 +1,10 @@
-import { motion } from "framer-motion";
 import { Heart, Sparkles, Award } from "lucide-react";
 
 const BrandStory = () => {
   return (
-    <section id="about" className="py-24 gradient-section">
+    <section id="about" className="py-24 bg-red-500">
       <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center"
-        >
+        <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary mb-8">
             <Sparkles className="w-4 h-4 text-aurelia-gold" />
             <span className="text-sm font-medium text-secondary-foreground tracking-widest uppercase">
@@ -39,27 +32,16 @@ const BrandStory = () => {
               her dedicated team, Aurelia Skin & Life stands as a sanctuary of healing, confidence, and care.
             </p>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto"
-        >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto">
           {[
             { icon: Heart, label: "Women Doctors", value: "35+" },
             { icon: Award, label: "Years of Trust", value: "Expert" },
             { icon: Sparkles, label: "Women & Children Only", value: "100%" },
-          ].map((stat, i) => (
-            <motion.div
+          ].map((stat) => (
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 + i * 0.1 }}
               className="text-center p-6 rounded-2xl gradient-card shadow-card"
             >
               <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
@@ -69,9 +51,9 @@ const BrandStory = () => {
               <div className="text-sm text-muted-foreground tracking-wide">
                 {stat.label}
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
