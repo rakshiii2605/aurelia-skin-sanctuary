@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import {
   Bot,
   CalendarDays,
@@ -57,13 +56,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-24 gradient-section">
       <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary mb-6">
             <span className="text-sm font-medium text-secondary-foreground tracking-widest uppercase">
               Services
@@ -76,16 +69,12 @@ const ServicesSection = () => {
             From AI-powered guidance to in-person consultations, we've designed every touchpoint 
             around your comfort and care.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {services.map((service, i) => (
-            <motion.div
+          {services.map((service) => (
+            <div
               key={service.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.5 }}
               className="group p-6 rounded-2xl gradient-card shadow-soft hover:shadow-card transition-all duration-400 hover:-translate-y-1"
             >
               <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
@@ -97,7 +86,7 @@ const ServicesSection = () => {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {service.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

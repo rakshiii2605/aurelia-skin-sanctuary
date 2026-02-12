@@ -1,21 +1,13 @@
-import { motion } from "framer-motion";
 import { Star, GraduationCap } from "lucide-react";
 
 interface DoctorCardProps {
   name: string;
   role: string;
   description: string;
-  delay?: number;
 }
 
-const DoctorCard = ({ name, role, description, delay = 0 }: DoctorCardProps) => (
-  <motion.div
-    initial={{ opacity: 0, y: 30 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-80px" }}
-    transition={{ duration: 0.7, delay }}
-    className="group relative p-8 rounded-3xl gradient-card shadow-card hover:shadow-elevated transition-all duration-500"
-  >
+const DoctorCard = ({ name, role, description }: DoctorCardProps) => (
+  <div className="group relative p-8 rounded-3xl gradient-card shadow-card hover:shadow-elevated transition-all duration-500">
     <div className="absolute top-0 left-0 right-0 h-1 rounded-t-3xl bg-gradient-to-r from-aurelia-azure via-aurelia-pearl to-aurelia-ice opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     
     <div className="w-20 h-20 rounded-full bg-secondary flex items-center justify-center mx-auto mb-6">
@@ -34,7 +26,7 @@ const DoctorCard = ({ name, role, description, delay = 0 }: DoctorCardProps) => 
         {description}
       </p>
     </div>
-  </motion.div>
+  </div>
 );
 
 const DoctorsSection = () => {
@@ -62,13 +54,7 @@ const DoctorsSection = () => {
   return (
     <section id="doctors" className="py-24 bg-background">
       <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary mb-6">
             <span className="text-sm font-medium text-secondary-foreground tracking-widest uppercase">
               Leadership
@@ -81,11 +67,11 @@ const DoctorsSection = () => {
             Our leadership team of dedicated women doctors guides Aurelia with compassion, 
             expertise, and an unwavering commitment to women's wellness.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {leaders.map((doc, i) => (
-            <DoctorCard key={doc.name} {...doc} delay={i * 0.15} />
+          {leaders.map((doc) => (
+            <DoctorCard key={doc.name} {...doc} />
           ))}
         </div>
       </div>
