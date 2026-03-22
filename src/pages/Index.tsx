@@ -6,7 +6,7 @@ import { Heart, Sparkles, Award, Star, GraduationCap, Bot, CalendarDays, Activit
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background" id="page-root">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
       
