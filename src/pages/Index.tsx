@@ -14,6 +14,12 @@ const Index = () => {
       <section id="about" style={{ padding: "96px 0", backgroundColor: "#dbeafe" }}>
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card shadow-card mb-8">
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-foreground tracking-widest uppercase">
+                Our Story
+              </span>
+            </div>
             <h2 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-8 leading-tight">
               A Sanctuary of Healing, Confidence & Care
             </h2>
