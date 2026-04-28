@@ -6,7 +6,7 @@ import { Heart, Sparkles, Award, Star, GraduationCap, Bot, CalendarDays, Activit
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background" data-page="aurelia-home">
       <Navbar />
       <HeroSection />
       
