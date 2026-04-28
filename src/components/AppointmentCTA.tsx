@@ -15,13 +15,15 @@ const AppointmentCTA = () => {
               Book your appointment today and experience the Aurelia difference — 
               expert care in a safe, beautiful, women-only environment.
             </p>
-            <Button
-              size="lg"
-              className="rounded-full px-10 py-6 text-base bg-background text-foreground hover:bg-background/90 shadow-elevated hover:scale-105 transition-all duration-300"
-            >
-              Book Appointment
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+            <a href="/#appointment">
+              <Button
+                size="lg"
+                className="rounded-full px-10 py-6 text-base bg-background text-foreground hover:bg-background/90 shadow-elevated hover:scale-105 transition-all duration-300"
+              >
+                Book Appointment
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>

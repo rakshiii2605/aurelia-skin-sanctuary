@@ -20,13 +20,20 @@ const Footer = () => {
           <div>
             <h4 className="font-serif text-lg font-semibold text-background mb-4">Quick Links</h4>
             <div className="space-y-2">
-              {["Home", "About", "Doctors", "Services", "Appointments"].map((link) => (
+              {[
+                { label: "Home", anchor: "home" },
+                { label: "About", anchor: "about" },
+                { label: "Doctors", anchor: "doctors" },
+                { label: "Services", anchor: "services" },
+                { label: "Appointments", anchor: "appointment" },
+                { label: "Contact", anchor: "contact" },
+              ].map((link) => (
                 <a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
+                  key={link.label}
+                  href={`/#${link.anchor}`}
                   className="block text-sm text-background/60 hover:text-background transition-colors"
                 >
-                  {link}
+                  {link.label}
                 </a>
               ))}
             </div>

@@ -4,11 +4,11 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Doctors", href: "#doctors" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Doctors", href: "/#doctors" },
+  { label: "Services", href: "/#services" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
       }`}
     >
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#home" className="flex items-center gap-2">
+        <a href="/#home" className="flex items-center gap-2">
           <span className="font-serif text-2xl font-semibold tracking-tight text-foreground">
             Aurelia
           </span>
@@ -53,7 +53,7 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <a href="#appointment">
+          <a href="/#appointment">
             <Button className="gradient-cta text-primary-foreground rounded-full px-6 shadow-soft hover:shadow-elevated transition-all duration-300">
               <Phone className="w-4 h-4 mr-2" />
               Get Appointment
@@ -90,7 +90,7 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <a href="#appointment" onClick={() => setMobileOpen(false)}>
+              <a href="/#appointment" onClick={() => setMobileOpen(false)}>
                 <Button className="gradient-cta text-primary-foreground rounded-full w-full mt-2">
                   Get Appointment
                 </Button>
